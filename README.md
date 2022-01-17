@@ -27,6 +27,7 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 - Spring Data JPA 2.6.0;
 - Spring Mail 2.6.2
 - Jersey Apache Client, Client4, Core 1.19.4;
+- ModelMapper 2.4.2
 - Gradle 7.3;
 - Lombook;
 - PostgreSql;
