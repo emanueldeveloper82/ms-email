@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -46,6 +47,9 @@ public class Email implements Serializable {
 
     @Column(name = "STATUS_EMAIL")
     private StatusEmail statusEmail;
+
+    @Transient
+    private Usuario usuario;
 
     @PrePersist
     public void prePersist() {
