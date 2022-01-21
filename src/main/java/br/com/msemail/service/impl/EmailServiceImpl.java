@@ -104,7 +104,8 @@ public class EmailServiceImpl implements EmailService {
             emailDTO.setSubject("NÃO RESPONDA");
             emailDTO.setEmailTo(solicitacaoDTO.getEmail());
 
-            if (usuarioResponse.getStatusCode().isError()) {
+            if (!usuarioResponse.getStatusCode().isError() &&
+                    usuarioResponse.getStatusCode().equals(HttpStatus.NO_CONTENT)) {
                 log.info("Usuário não encontrado na base de dados.");
                 emailDTO.setBody("Você realizou uma solicitação de cadastro em nosso sistema. " +
                         " A GloboDyne agradece!");
